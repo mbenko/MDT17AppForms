@@ -2,10 +2,53 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MDT17AppForms"
+             BindingContext="{x:Static local:MyViewModelLocator.MyDataVM}"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              x:Class="MDT17AppForms.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout Margin="20" Spacing="20">
+
+        <Label Text="{Binding Title}" TextColor="Navy"
+               VerticalOptions="Center"  FontSize="25"
+               HorizontalOptions="Center" />
+
+
+        <Label Text="Enter your name:" TextColor="Black"/>
+
+
+        <StackLayout Orientation="Horizontal">
+            <Entry Text="{Binding name}" WidthRequest="250" x:Name="txtName" TextColor="Black" BackgroundColor="Silver"/>
+
+
+            <Button Text="Click Me!" Clicked="Button_Clicked"  
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" 
+                    BackgroundColor="LightBlue" 
+                    TextColor="Blue"/>
+        </StackLayout>
+        <Label x:Name="txtResult" Text="{Binding Title}" TextColor="Maroon" FontSize="25" />
+
+
+        <ListView ItemsSource="{Binding Items}" RowHeight="100" BackgroundColor="AntiqueWhite" ItemSelected="ListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Margin="4">
+                            <!--<Image Source="{Binding ImageURL}" Aspect="AspectFill" />-->
+                            <controls:CircleImage Source="{Binding ImageURL}" Aspect="AspectFill" BorderThickness="3" BorderColor="WhiteSmoke" />
+                            <StackLayout >
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Date}" TextColor="Olive" FontSize="22"/>
+                                    <Label Text="{Binding Venue}" TextColor="Black" FontSize="22" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="{Binding Name}" TextColor="Navy" FontSize="Medium"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
 
 </ContentPage>

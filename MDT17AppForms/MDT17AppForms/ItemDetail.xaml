@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MDT17AppForms.ItemDetail">
+
+    <StackLayout>
+        <Label Text="Name:"/>
+        <Entry Text="{Binding Name}"/>
+        <Label Text="Date:"/>
+        <Entry Text="{Binding Date}"/>
+        <Label Text="Venue:"/>
+        <Entry Text="{Binding Venue}"/>
+        <Label Text="Attendees:"/>
+        <Entry Text="{Binding Attendees}"/>
+        <Label Text="Image:"/>
+        <Entry Text="{Binding ImageURL}"/>
+        <Image Source="{Binding ImageURL}"/>
+
+        <Button Text="Save" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

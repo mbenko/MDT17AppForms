@@ -16,6 +16,7 @@ Global
 		MDT17AppForms\MDT17AppForms\MDT17AppForms.projitems*{2073c047-12db-4252-8220-71d1fcfa349f}*SharedItemsImports = 4
 		MDT17AppForms\MDT17AppForms\MDT17AppForms.projitems*{2ef9cf0f-43c5-4089-8cea-fd1ebc25a1f4}*SharedItemsImports = 4
 		MDT17AppForms\MDT17AppForms\MDT17AppForms.projitems*{5215dfe1-3df5-440b-8e24-d1cfade27846}*SharedItemsImports = 13
+		MDT17AppForms\MDT17AppForms\MDT17AppForms.projitems*{9ad1caf4-5ad3-4ffb-a448-60833f61920a}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

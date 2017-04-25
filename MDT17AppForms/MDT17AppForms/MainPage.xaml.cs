@@ -12,6 +12,25 @@ namespace MDT17AppForms
 		public MainPage()
 		{
 			InitializeComponent();
+
+            //BindingContext = new MyDataViewModel();
 		}
-	}
+
+        public int nCount { get; set; }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            txtResult.Text = $"I've been clicked {nCount++} times";
+
+            MyViewModelLocator.MyDataVM.Items.Add(new Event { Name = txtName.Text });
+
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var myEvent = e.SelectedItem as Event;
+
+            Navigation.PushModalAsync(new ItemDetail(myEvent));
+        }
+    }
 }
