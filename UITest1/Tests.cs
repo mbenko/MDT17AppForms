@@ -30,6 +30,27 @@ namespace UITest1
         {
             app.Screenshot("First screen.");
         }
+
+        [Test]
+        public void NewTest1()
+        {
+            app.Tap(x => x.Text("Click Me!"));
+            app.ClearText(x => x.Class("EntryEditText").Text("Judy"));
+            app.Tap(x => x.Text("VS 2017 Best Of Launch").Index(2));
+            app.Tap(x => x.Text("Des Moines"));
+            app.Tap(x => x.Class("EntryEditText").Index(3));
+            app.EnterText(x => x.Class("EntryEditText").Index(3), "h");
+            app.Tap(x => x.Text("Name:"));
+            app.Tap(x => x.Text("Save"));
+            app.Tap(x => x.Class("EntryEditText"));
+            app.EnterText(x => x.Class("EntryEditText"), "ut");
+            app.Tap(x => x.Text("Click Me!"));
+            app.ClearText(x => x.Class("EntryEditText").Text("ughtruth"));
+            app.Screenshot("Cleared text");
+            app.Tap(x => x.Class("PageRenderer"));
+            app.SwipeLeftToRight();
+            app.Screenshot("Swiped right");
+        }
     }
 }
 
