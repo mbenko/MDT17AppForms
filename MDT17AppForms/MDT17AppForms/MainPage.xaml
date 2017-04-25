@@ -13,7 +13,7 @@
                HorizontalOptions="Center" />
 
 
-        <Label text="Enter your name:" TextColor="Black"/>
+        <Label Text="Enter your name:" TextColor="Black"/>
 
 
         <StackLayout Orientation="Horizontal">
