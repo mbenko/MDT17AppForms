@@ -1,4 +1,4 @@
-﻿using Microsoft.WindowsAzure.MobileServices;
+﻿//using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,14 +19,15 @@ namespace MDT17AppForms
         {
 
             Title = "Mobile Dev Test 2017";
-            Items = new ObservableCollection<Event>();
-            Items.Add(new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "3/24", ImageURL = "minneapolis.png", Venue = "Minneapolis" });
-            Items.Add(new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/11", ImageURL = "desmoines.jpg", Venue = "Des Moines" });
-            Items.Add(new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/12", ImageURL = "omaha.jpg", Venue = "Omaha" });
-            Items.Add(new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/17", ImageURL = "chicago.jpg", Venue = "Chicago" });
-            Items.Add(new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/18", ImageURL = "stlouis.jpg", Venue = "St Louis" });
-            Items.Add(new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/19", ImageURL = "kansascity.jpg", Venue = "Kansas City" });
-
+            Items = new ObservableCollection<Event>
+            {
+                new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "3/24", ImageURL = "minneapolis.png", Venue = "Minneapolis" },
+                new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/11", ImageURL = "desmoines.jpg", Venue = "Des Moines" },
+                new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/12", ImageURL = "omaha.jpg", Venue = "Omaha" },
+                new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/17", ImageURL = "chicago.jpg", Venue = "Chicago" },
+                new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/18", ImageURL = "stlouis.jpg", Venue = "St Louis" },
+                new Event { Name = "VS 2017 Best Of Launch", Attendees = 1, Date = "4/19", ImageURL = "kansascity.jpg", Venue = "Kansas City" }
+            };
         }
 
 

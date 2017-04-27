@@ -51,6 +51,11 @@ namespace UITest1
             app.SwipeLeftToRight();
             app.Screenshot("Swiped right");
         }
+
+        [Test]
+        public void NewTest()
+        {
+        }
     }
 }
 
