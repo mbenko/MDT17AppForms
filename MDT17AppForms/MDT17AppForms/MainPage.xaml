@@ -25,7 +25,7 @@
             <Entry Text="{Binding name}" WidthRequest="250" x:Name="txtName" TextColor="Black" BackgroundColor="Silver"/>
 
 
-            <Button Text="Click Me!" Clicked="Button_Clicked"  
+            <Button Text="Add Event" Clicked="Button_Clicked"  
                     HorizontalOptions="Center" 
                     VerticalOptions="Center" 
                     BackgroundColor="LightBlue" 
@@ -34,7 +34,7 @@
         <Label x:Name="txtResult" Text="{Binding Title}" TextColor="Maroon" FontSize="25" />
 
 
-        <ListView ItemsSource="{Binding Items}" RowHeight="100" BackgroundColor="AntiqueWhite" ItemSelected="ListView_ItemSelected">
+        <ListView ItemsSource="{Binding Events}" RowHeight="100" BackgroundColor="AntiqueWhite" ItemSelected="ListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -44,7 +44,7 @@
                             <StackLayout >
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="{Binding Date}" TextColor="{Binding Venue, Converter={StaticResource VenueConverter}}" FontSize="Medium"/>
-                                    <Label Text="{Binding Venue}" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Venue}" TextColor="{Binding Venue, Converter={StaticResource VenueConverter}}" FontSize="Medium" FontAttributes="Bold"/>
                                 </StackLayout>
                                 <Label Text="{Binding Name}" TextColor="Navy" FontSize="Small"/>
                             </StackLayout>

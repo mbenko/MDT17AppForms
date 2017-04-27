@@ -16,7 +16,7 @@
             <Label Text="Image:"/>
             <Entry Text="{Binding ImageURL}"/>
             <Image Source="{Binding ImageURL}"/>
-
+            
             <Button Text="Save" Clicked="Button_Clicked"/>
         </StackLayout>
     </ScrollView>

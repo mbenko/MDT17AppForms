@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,15 +19,33 @@ namespace MDT17AppForms
 
         public int nCount { get; set; }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            txtResult.Text = $"I've been clicked {nCount++} times";
+            try
+            {
+                //if (MyViewModelLocator.MyDataVM.MobileClient.CurrentUser == null)
+                //{
+                //    var token = new JObject();
+                //    // Replace access_token_value with actual value of your access token obtained
+                //    // using the Facebook or Google SDK.
+                //    token.Add("access_token", "");
+                //    token.Add("access_token_secret", "");
 
-            MyViewModelLocator.MyDataVM.Items.Add(new Event { Name = txtName.Text });
+                //    var user = await MyViewModelLocator.MyDataVM.MobileClient.LoginAsync(Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider.Twitter, token);
+                //}
 
-            int i = 0;
-            int crashme = 4 / i;
-            i--;
+                txtResult.Text = $"I've been clicked {nCount++} times";
+
+                var myEvent = new Event { Name = txtName.Text };
+                // await MyViewModelLocator.MyDataVM.InsertItem(myEvent);
+                await Navigation.PushModalAsync(new ItemDetail(myEvent));
+
+            }
+            catch (Exception ex)
+            {
+                var msg = ex;
+                //throw;
+            }
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

@@ -22,9 +22,12 @@ namespace MDT17AppForms
             BindingContext = myData;
 		}
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PopModalAsync();
+     
+            await MyViewModelLocator.MyDataVM.UpdateItem(BindingContext as Event);
+
+            await Navigation.PopModalAsync();
         }
     }
 }

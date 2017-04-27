@@ -32,12 +32,14 @@ namespace MDT17AppForms
 			//MainPage = new MDT17AppForms.MainPage();
 		}
 
-		protected override void OnStart ()
+		protected async override void OnStart ()
 		{
             // Handle when your app starts
             MobileCenter.Start("android=b7d1b2c1-f547-4f22-8ae5-3340e5c31bfc;" +
                    "ios={Your iOS App secret here}",
                    typeof(Analytics), typeof(Crashes));
+
+            await MyViewModelLocator.MyDataVM.LoadData();
         }
 
 		protected override void OnSleep ()
