@@ -24,6 +24,9 @@ namespace MDT17AppForms
 
             MyViewModelLocator.MyDataVM.Items.Add(new Event { Name = txtName.Text });
 
+            int i = 0;
+            int crashme = 4 / i;
+            i--;
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
