@@ -6,6 +6,11 @@
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              x:Class="MDT17AppForms.MainPage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:MyTextColorDateConverter x:Key="VenueConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <StackLayout Margin="20" Spacing="20">
 
         <Label Text="{Binding Title}" TextColor="Navy"
@@ -34,14 +39,14 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Margin="4">
-                            <!--<Image Source="{Binding ImageURL}" Aspect="AspectFill" />-->
-                            <controls:CircleImage Source="{Binding ImageURL}" Aspect="AspectFill" BorderThickness="3" BorderColor="WhiteSmoke" />
+                            <Image Source="{Binding ImageURL}" Aspect="AspectFill" />
+                            <!--<controls:CircleImage Source="{Binding ImageURL}" Aspect="AspectFill" BorderThickness="3" BorderColor="WhiteSmoke" />-->
                             <StackLayout >
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Date}" TextColor="Olive" FontSize="22"/>
-                                    <Label Text="{Binding Venue}" TextColor="Black" FontSize="22" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Date}" TextColor="{Binding Venue, Converter={StaticResource VenueConverter}}" FontSize="Medium"/>
+                                    <Label Text="{Binding Venue}" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
                                 </StackLayout>
-                                <Label Text="{Binding Name}" TextColor="Navy" FontSize="Medium"/>
+                                <Label Text="{Binding Name}" TextColor="Navy" FontSize="Small"/>
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

@@ -3,19 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MDT17AppForms.ItemDetail">
 
-    <StackLayout>
-        <Label Text="Name:"/>
-        <Entry Text="{Binding Name}"/>
-        <Label Text="Date:"/>
-        <Entry Text="{Binding Date}"/>
-        <Label Text="Venue:"/>
-        <Entry Text="{Binding Venue}"/>
-        <Label Text="Attendees:"/>
-        <Entry Text="{Binding Attendees}"/>
-        <Label Text="Image:"/>
-        <Entry Text="{Binding ImageURL}"/>
-        <Image Source="{Binding ImageURL}"/>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Name:"/>
+            <Entry Text="{Binding Name}"/>
+            <Label Text="Date:"/>
+            <Entry Text="{Binding Date}"/>
+            <Label Text="Venue:"/>
+            <Entry Text="{Binding Venue}"/>
+            <Label Text="Attendees:"/>
+            <Entry Text="{Binding Attendees}"/>
+            <Label Text="Image:"/>
+            <Entry Text="{Binding ImageURL}"/>
+            <Image Source="{Binding ImageURL}"/>
 
-        <Button Text="Save" Clicked="Button_Clicked"/>
-    </StackLayout>
+            <Button Text="Save" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

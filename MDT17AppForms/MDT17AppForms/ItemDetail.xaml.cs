@@ -12,7 +12,10 @@ namespace MDT17AppForms
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ItemDetail : ContentPage
 	{
-        
+        public ItemDetail()
+        {
+            InitializeComponent();
+        }
 		public ItemDetail (Event myData)
 		{
 			InitializeComponent ();
