@@ -4,7 +4,7 @@
              x:Class="MDT17AppForms.ItemDetail">
 
     <ScrollView>
-        <StackLayout>
+        <StackLayout Margin="15">
             <Label Text="Name:"/>
             <Entry Text="{Binding Name}"/>
             <Label Text="Date:"/>
