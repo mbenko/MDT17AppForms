@@ -21,6 +21,11 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreAPI", "CoreAPI\CoreAPI.csproj", "{5AD1EA43-A995-42C4-BA43-8E3790BC0355}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deck", "Deck", "{12C1DC93-B243-46A1-AFF9-BB8A06EC4486}"
+	ProjectSection(SolutionItems) = preProject
+		Deck\ConferencesMDT17-Xamarin.pdf = Deck\ConferencesMDT17-Xamarin.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		MDT17AppForms\MDT17AppForms\MDT17AppForms.projitems*{2073c047-12db-4252-8220-71d1fcfa349f}*SharedItemsImports = 4
